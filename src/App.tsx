@@ -1,6 +1,6 @@
 import { Header } from './components/Header/indesx';
 import { GlobalStyle } from './styles/global';
-import { Dashboard } from './components/dashboard';
+import { Dashboard } from './components/Dashboard';
 export function App() {
 	return (
 		<div className="App">
