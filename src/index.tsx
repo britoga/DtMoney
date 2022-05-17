@@ -5,7 +5,30 @@ import { createServer, Model } from 'miragejs';
 
 createServer({
 	models: {
-		transaction: Model,
+		transaction: Model, // models é para seguirmos o modelo de inserção de dados na API Fake
+	},
+
+	seeds(server) {
+		server.db.loadData({
+			transactions: [
+				{
+					id: 1,
+					title: 'Freelance',
+					type: 'deposit',
+					category: 'dev',
+					amount: 1000,
+					createdAt: new Date('2022-02-12 09:00:00'),
+				},
+				{
+					id: 2,
+					title: 'Aluguel',
+					type: 'withDrown',
+					category: 'Casa',
+					amount: 800,
+					createdAt: new Date('2022-02-14 10:00:00'),
+				},
+			],
+		});
 	},
 
 	routes() {

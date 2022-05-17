@@ -59,9 +59,9 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
 					<RadioBox
 						type="button"
 						onClick={() => {
-							setType('withdraw');
+							setType('withDrown');
 						}}
-						isActive={type === 'withdraw'}
+						isActive={type === 'withDrown'}
 						activeColor="red"
 						sizeFont="big"
 					>
