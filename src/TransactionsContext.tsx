@@ -23,5 +23,5 @@ export function TransactionProvider({ children }: TransactionsProviderProps) {
 		api.get('transactions').then((response) => setTransactions(response.data.transactions));
 	}, []);
 
-	return <TransactionContext.Provider value={transactions}></TransactionContext.Provider>;
+	return <TransactionContext.Provider value={transactions}> {children} </TransactionContext.Provider>;
 }
